@@ -27,7 +27,6 @@ $("#add-budget-btn").on("click", () => {
 
   if (!budget_amount || parseInt(budget_amount.toString()) != budget_amount)
     return $("h4").eq(1).css("display", "block");
-
   $("input").val("");
   $("#add-budget-modal").modal("toggle");
 
@@ -203,6 +202,7 @@ $("#add-expense-btn").on("click", () => {
 
   localStorage.setItem("budgets", JSON.stringify([card, ...cards]));
   calculateAmount();
+  location.reload();
 });
 
 $("#view-budget").on("click", () => {
