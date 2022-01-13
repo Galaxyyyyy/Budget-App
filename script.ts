@@ -114,6 +114,7 @@ function addViewExpenseListener() {
     localStorage.setItem("budgets", JSON.stringify([card, ...cards]));
     btn.parent().remove();
     calculateAmount();
+    location.reload();
   });
 }
 
