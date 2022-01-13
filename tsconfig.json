@@ -1,0 +1,10 @@
+{
+  "compileOnSave": true,
+  "typeAcquisition": {
+    "include": ["jquery"]
+  },
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "es6"
+  }
+}
