@@ -196,7 +196,9 @@ $("#add-expense-btn").on("click", () => {
   $("#add-expense-modal").modal("hide");
 
   if (card.expenses[expense_name])
-    card.expenses[expense_name] += parseInt(expense_amount.toString());
+    card.expenses[expense_name] =
+      parseInt(card.expenses[expense_name]) +
+      parseInt(expense_amount.toString());
   else card.expenses[expense_name] = expense_amount;
 
   localStorage.setItem("budgets", JSON.stringify([card, ...cards]));
